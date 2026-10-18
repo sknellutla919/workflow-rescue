@@ -1,0 +1,28 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Workflow Rescue: broken n8n workflow fixed for £95, pay once it works</title>
+<meta name="description" content="Flat-fee n8n workflow fixes (£95, pay after it works), Zapier to n8n migrations (£495) and managed self-hosted n8n. Free Zapier vs n8n cost calculator.">
+<style>body{font-family:system-ui,sans-serif;max-width:760px;margin:2rem auto;padding:0 1rem;line-height:1.55;color:#1d1d1f}h1{font-size:1.8rem}.card{border:1px solid #ddd;border-radius:10px;padding:1rem 1.2rem;margin:1rem 0}.btn{display:inline-block;background:#ea4b71;color:#fff;padding:.5rem 1rem;border-radius:6px;text-decoration:none}label{display:block;margin:.4rem 0}input{width:8rem}small{color:#666}</style></head><body>
+<h1>Workflow Rescue</h1><h2>Broken n8n workflow? Fixed for £95. Pay only after it works.</h2>
+<p>Workflow Rescue is run by Santosh Kumar at CortexLabs AI Ltd (UK company no. 17385502). We fix stuck n8n workflows and move Zapier setups to n8n. Tell us about your workflow and the error, and we'll reply with a free diagnosis of what's failing before you pay anything.</p>
+
+<div class="card"><h2>£95 workflow fix</h2><p>One existing workflow, one problem. You send the exported workflow JSON (n8n leaves your secrets out of exports) and a screenshot of the failed execution. We tell you which node is failing and why. If it's in scope, we fix it, and you pay only after you've seen it run.</p><a class="btn" href="https://buy.stripe.com/eVqbJ15sy5C5aAfcag5Rm00">Pay £95 (use once your fix is confirmed)</a></div>
+<div class="card"><h2>£495 Zapier → n8n migration</h2><p>We rebuild your Zaps as n8n workflows and test them with you. You re-connect your own accounts, so we never need your passwords. Scope is agreed in writing before you pay.</p><a class="btn" href="https://buy.stripe.com/cNi9AT6wC7Kd9wb0ry5Rm01">Pay £495</a></div>
+<div class="card"><h2>£39/month managed self-hosted n8n</h2><p>Hosting, updates, backups and failure alerts for your n8n instance.</p><a class="btn" href="https://buy.stripe.com/00w6oH9IOaWp8s76PW5Rm02">Subscribe £39/month</a></div>
+
+<h2 id="calc">Free calculator: what would your Zapier usage cost on n8n?</h2>
+<p><small>Zapier bills per task (every action step in every run). n8n bills per workflow run on n8n Cloud, and has no per-run fee when self-hosted. This is a rough estimate from your own numbers, not a quote. Check current prices on each vendor's site.</small></p>
+<label>Your current Zapier bill per month (£) <input id="bill" type="number" value="150"></label>
+<label>Zap runs per month (all Zaps) <input id="runs" type="number" value="2000"></label>
+<label>Average action steps per Zap <input id="steps" type="number" value="4"></label>
+<label>Self-hosted cost per month (£), e.g. our managed plan <input id="host" type="number" value="39"></label>
+<p id="out"></p>
+<script>
+function c(){const b=+bill.value,r=+runs.value,s=+steps.value,h=+host.value;
+out.innerHTML=`Zapier tasks per month: <b>${(r*s).toLocaleString()}</b>. Equivalent n8n executions: <b>${r.toLocaleString()}</b>.<br>
+Self-hosted n8n at £${h}/month vs your £${b}/month Zapier bill: about <b>£${Math.max(0,(b-h)*12).toLocaleString()}</b> a year difference.<br>
+A £495 one-off migration pays back in about <b>${b>h?Math.ceil(495/(b-h)):'—'}</b> months.`}
+document.querySelectorAll('input').forEach(i=>i.oninput=c);c();
+</script>
+<h2>Pay only after it works. Tell us about your workflow</h2><p><b>Contact: coming soon.</b> Please never send passwords or API keys.</p>
+<p><small>CortexLabs AI Ltd, Fenchurch House, 12 King Street, Nottingham NG1 2AS. Workflow Rescue is not affiliated with, or endorsed by, n8n GmbH or Zapier Inc.</small></p>
+</body></html>
